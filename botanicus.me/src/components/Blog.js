@@ -2,6 +2,17 @@ import React, { Component } from 'react';
 import { Link } from 'react-router';
 import request from 'superagent';
 
+// TODO: Use context instead:
+// https://facebook.github.io/react/docs/context.html
+if (process.env.NODE_ENV === 'development') {
+  window.API_BASE_URL = 'http://api.botanicus.dev:8000';
+}
+else if (process.env.NODE_ENV === 'production') {
+  window.API_BASE_URL = 'http://api.botanicus.me';
+} else {
+  console.error(`Unhandled environment: ${process.env.NODE_ENV}`)
+}
+
 export class BlogIndex extends Component {
   constructor(props) {
     super(props);
@@ -9,7 +20,7 @@ export class BlogIndex extends Component {
   }
 
   componentDidMount() {
-    request.get('http://api.botanicus.me/posts.json').end((error, response) => {
+    request.get(`${window.API_BASE_URL}/posts.json`).end((error, response) => {
       this.setState({posts: response.body});
     });
   }
@@ -56,7 +67,7 @@ export class BlogPost extends Component {
   }
 
   componentDidMount() {
-    request.get(`http://api.botanicus.me${this.props.location.pathname}.json`).end((error, response) => {
+    request.get(`${window.API_BASE_URL}${this.props.location.pathname}.json`).end((error, response) => {
       this.setState({post: response.body});
     });
   }
