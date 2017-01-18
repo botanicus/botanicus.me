@@ -20,7 +20,6 @@ export class BlogIndex extends Component {
 
     return (
       <div>
-        <h1>My blog</h1>
         {posts.map(post => this.renderPost(post))}
       </div>
     );

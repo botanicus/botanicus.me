@@ -1,17 +1,9 @@
 import React, { Component } from 'react';
 import { Router, Route, IndexRoute, browserHistory } from 'react-router';
+import { Layout } from './Layout.js';
 import { BlogIndex, BlogPost } from './Blog.js';
-import './App.css';
+import './Layout.css';
 
-class Layout extends Component {
-  render() {
-    return (
-      <div>
-        {this.props.children}
-      </div>
-    );
-  }
-}
 
 class NotFound extends Component {
   render() {
