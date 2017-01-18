@@ -1,0 +1,21 @@
+{
+  "title": "Learning tango in Buenos Aires",
+  "draft": true,
+  "tags": [
+    {
+      "title": "dancing",
+      "slug": "dancing",
+      "feed": "/dancing.atom"
+    },
+    {
+      "title": "tango",
+      "slug": "tango",
+      "feed": "/tango.atom"
+    }
+  ],
+  "slug": "learning-tango",
+  "published_on": "2017-01-16",
+  "excerpt": "Excerpt",
+  "path": "/posts/learning-tango",
+  "body": "<h1>Hello world!</h1>\n<p>\n  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Soluta quibusdam necessitatibus tempore ullam incidunt amet omnis, veritatis dicta quisquam accusamus at provident vel facere corporis sed fugiat cumque. Consequuntur, necessitatibus!\n</p>"
+}

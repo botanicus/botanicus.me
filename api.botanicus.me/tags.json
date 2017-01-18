@@ -1,0 +1,12 @@
+[
+  {
+    "title": "dancing",
+    "slug": "dancing",
+    "feed": "/dancing.atom"
+  },
+  {
+    "title": "tango",
+    "slug": "tango",
+    "feed": "/tango.atom"
+  }
+]
