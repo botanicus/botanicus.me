@@ -12,7 +12,7 @@ rake build
 rake run
 
 curl http://api.unplug.it:8000/posts.json
-curl http://unplug.it:8000/index.html
+curl http://unplug.it:8000/
 ```
 
 # Deployment
