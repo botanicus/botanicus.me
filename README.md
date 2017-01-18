@@ -6,6 +6,7 @@
 sudo tee -a /etc/hosts <<EOF
 127.0.0.1 botanicus.me
 127.0.0.1 api.botanicus.me
+127.0.0.1 blog.botanicus.me
 EOF
 
 rake build
