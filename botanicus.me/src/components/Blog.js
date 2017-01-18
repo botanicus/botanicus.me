@@ -9,7 +9,7 @@ export class BlogIndex extends Component {
   }
 
   componentDidMount() {
-    request.get('http://api.unplug.it:8000/posts.json').end((error, response) => {
+    request.get('http://api.botanicus.me:8000/posts.json').end((error, response) => {
       this.setState({posts: response.body});
     });
   }
@@ -56,7 +56,7 @@ export class BlogPost extends Component {
   }
 
   componentDidMount() {
-    request.get(`http://api.unplug.it:8000${this.props.location.pathname}.json`).end((error, response) => {
+    request.get(`http://api.botanicus.me:8000${this.props.location.pathname}.json`).end((error, response) => {
       this.setState({post: response.body});
     });
   }

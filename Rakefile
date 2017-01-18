@@ -1,24 +1,24 @@
-desc 'Build api.unplug.it.'
-task 'api.unplug.it' do
-  sh 'blog-generator.rb posts/ api.unplug.it/'
+desc 'Build api.botanicus.me.'
+task 'api.botanicus.me' do
+  sh 'blog-generator.rb posts/ api.botanicus.me/'
 end
 
-desc 'Build unplug.it.'
-task 'unplug.it' do
-  Dir.chdir('unplug.it') do
+desc 'Build botanicus.me.'
+task 'botanicus.me' do
+  Dir.chdir('botanicus.me') do
     sh 'npm run build'
   end
 end
 
 desc 'Build the Docker image.'
 task 'docker:build' do
-  sh 'docker build . -t botanicus/unplug.it'
+  sh 'docker build . -t botanicus/botanicus.me'
 end
 
 desc 'Build everything.'
-task build: ['api.unplug.it', 'unplug.it', 'docker:build']
+task build: ['api.botanicus.me', 'botanicus.me', 'docker:build']
 
 desc 'Run the web server.'
 task :run do
-  sh 'docker run -it -p 8000:80 botanicus/unplug.it'
+  sh 'docker run -it -p 8000:80 botanicus/botanicus.me'
 end
