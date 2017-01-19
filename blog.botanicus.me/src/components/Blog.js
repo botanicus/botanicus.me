@@ -1,4 +1,4 @@
-import React, { Component, propTypes } from 'react';
+import React, { Component, PropTypes } from 'react';
 import { Link } from 'react-router';
 import request from 'superagent';
 import { ReactDisqusComments as Disqus } from 'react-disqus-comments';
@@ -62,10 +62,10 @@ export class BlogIndex extends Component {
 
 class BlogPostPreview extends Component {
   static propTypes = {
-    post: propTypes.shape({
-      path: propTypes.string.isRequired,
-      title: propTypes.string.isRequired,
-      excerpt: propTypes.string.isRequired
+    post: PropTypes.shape({
+      path: PropTypes.string.isRequired,
+      title: PropTypes.string.isRequired,
+      excerpt: PropTypes.string.isRequired
     }).isRequired
   }
 
@@ -79,6 +79,19 @@ class BlogPostPreview extends Component {
           {post.excerpt}
         </p>
       </div>
+    );
+  }
+}
+
+export class Discussion extends Component {
+  render() {
+    return (
+      <Disqus shortname="example"
+              identifier="something-unique-12345"
+              title="Example Thread"
+              url="http://www.example.com/example-thread"
+              category_id="123456"
+              onNewComment={this.handleNewComment} />
     );
   }
 }
