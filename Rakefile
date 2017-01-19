@@ -6,7 +6,7 @@ end
 desc 'Build blog.botanicus.me.'
 task 'blog.botanicus.me' do
   Dir.chdir('blog.botanicus.me') do
-    sh 'npm run build'
+    sh 'npm install && npm run build'
   end
 end
 
