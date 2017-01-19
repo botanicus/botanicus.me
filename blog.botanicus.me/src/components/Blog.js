@@ -13,7 +13,6 @@ state {
 }
 
 ... plug in react-router-redux.
-*/
 const reducer = (state = {}, action) => {
   switch (action.type) {
     case 'DATA_FETCHED':
@@ -24,6 +23,7 @@ const reducer = (state = {}, action) => {
 }
 
 const store = createStore(reducer);
+*/
 
 // TODO: Use context instead:
 // https://facebook.github.io/react/docs/context.html
