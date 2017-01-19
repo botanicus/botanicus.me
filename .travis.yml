@@ -11,7 +11,5 @@ script:
   - rake build
 
 after_success:
-  - if [ "$TRAVIS_BRANCH" == "master" ]; then
-    docker login -u="$DOCKER_USERNAME" -p="$DOCKER_PASSWORD";
-    docker push docker push botanicus/botanicus.me;
-    fi
+  - test "$TRAVIS_BRANCH" == "master" && docker login -u="$DOCKER_USERNAME" -p="$DOCKER_PASSWORD"
+  - test "$TRAVIS_BRANCH" == "master" && docker push docker push botanicus/botanicus.me
