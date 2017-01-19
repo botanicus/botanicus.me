@@ -1,0 +1,19 @@
+# Set up a build server to compile the project and plug it between GH & Docker Cloud.
+
+# After eject
+
+## CSS modules.
+  ? https://github.com/css-modules/postcss-modules
+  https://github.com/css-modules/webpack-demo
+
+  Start with https://github.com/webpack/css-loader#css-modules, but there's also
+  https://github.com/gajus/react-css-modules and https://github.com/gajus/babel-plugin-react-css-modules
+
+  Read:
+    https://github.com/css-modules/css-modules
+    https://medium.com/@pioul/modular-css-with-react-61638ae9ea3e#.ee62pg2z1
+
+## CSS 4 & PostCSS.
+  http://postcss.org/
+  http://css4.rocks/
+  http://cssnext.io/

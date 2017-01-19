@@ -1,6 +1,29 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router';
 import request from 'superagent';
+import { createStore } from 'redux';
+
+/*
+state {
+  routes: {
+    "/": {"posts": [...]},
+    "/posts/learning-tango": {"title": ...},
+    "/tags/tango": {"posts": [...]}
+  }
+}
+
+... plug in react-router-redux.
+*/
+const reducer = (state = {}, action) => {
+  switch (action.type) {
+    case 'DATA_FETCHED':
+      return {};
+    default:
+      return state;
+  }
+}
+
+const store = createStore(reducer);
 
 // TODO: Use context instead:
 // https://facebook.github.io/react/docs/context.html
