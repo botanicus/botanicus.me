@@ -3,9 +3,9 @@ task 'api.botanicus.me' do
   sh 'blog-generator.rb posts/ api.botanicus.me/'
 end
 
-desc 'Build botanicus.me.'
-task 'botanicus.me' do
-  Dir.chdir('botanicus.me') do
+desc 'Build blog.botanicus.me.'
+task 'blog.botanicus.me' do
+  Dir.chdir('blog.botanicus.me') do
     sh 'npm run build'
   end
 end
@@ -16,7 +16,7 @@ task 'docker:build' do
 end
 
 desc 'Build everything.'
-task build: ['api.botanicus.me', 'botanicus.me', 'docker:build']
+task build: ['api.botanicus.me', 'blog.botanicus.me', 'docker:build']
 
 desc 'Run the web server.'
 task :run do

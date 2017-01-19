@@ -6,7 +6,7 @@ ENV ROOT /webs
 RUN mkdir -p $ROOT
 WORKDIR $ROOT
 
-COPY botanicus.me/build $ROOT/botanicus.me
+COPY blog.botanicus.me/build $ROOT/botanicus.me
 COPY api.botanicus.me $ROOT/api.botanicus.me
 
 # Override the existing default vhost.
