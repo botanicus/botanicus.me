@@ -1,8 +1,7 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router';
 import request from 'superagent';
-import { API_BASE_URL } from '../constants';
-console.log(['API_BASE_URL', API_BASE_URL, process.env.NODE_ENV]);
+import { serverURL } from '../utils';
 
 /*
 import { createStore } from 'redux';
@@ -35,7 +34,7 @@ export class BlogIndex extends Component {
   }
 
   componentDidMount() {
-    request.get(`${API_BASE_URL}/posts.json`).end((error, response) => {
+    request.get(serverURL('/posts.json')).end((error, response) => {
       this.setState({posts: response.body});
     });
   }
@@ -82,7 +81,7 @@ export class BlogPost extends Component {
   }
 
   componentDidMount() {
-    request.get(`${API_BASE_URL}${this.props.location.pathname}.json`).end((error, response) => {
+    request.get(serverURL('${this.props.location.pathname}.json')).end((error, response) => {
       this.setState({post: response.body});
     });
   }
