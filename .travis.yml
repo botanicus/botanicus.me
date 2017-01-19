@@ -6,6 +6,8 @@ services:
 
 before_install:
   - gem install blog-generator
+  # http://stackoverflow.com/questions/18419144/npm-not-working-read-econnreset
+  - npm config set registry http://registry.npmjs.org/
 
 script:
   - rake build
