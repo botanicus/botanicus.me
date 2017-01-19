@@ -26,4 +26,7 @@ travis env set DOCKER_PASSWORD ...
 ```
 
 # Delete all containers
+
+```
 docker rmi $(docker images -q)
+```
