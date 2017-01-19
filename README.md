@@ -18,7 +18,12 @@ curl http://botanicus.dev:8000/
 
 # Deployment
 
-TODO
+```
+gem install travis
+travis login --org
+travis env set DOCKER_USERNAME ...
+travis env set DOCKER_PASSWORD ...
+```
 
 # Delete all containers
 docker rmi $(docker images -q)
