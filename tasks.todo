@@ -10,8 +10,6 @@ front-end: React + Redux.
 
 # Misc
 
-## propTypes
-
 ## Assets handling in blog-generator
 
 # Redux

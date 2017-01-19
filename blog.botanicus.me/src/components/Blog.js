@@ -1,6 +1,7 @@
 import React, { Component, propTypes } from 'react';
 import { Link } from 'react-router';
 import request from 'superagent';
+import { ReactDisqusComments as Disqus } from 'react-disqus-comments';
 import { serverURL } from '../utils';
 
 /*

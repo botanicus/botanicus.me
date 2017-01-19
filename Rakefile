@@ -15,6 +15,11 @@ task 'docker:build' do
   sh 'docker build . -t botanicus/botanicus.me'
 end
 
+desc 'Push the Docker image.'
+task 'docker:push' do
+  sh 'docker push botanicus/botanicus.me'
+end
+
 desc 'Build everything.'
 task build: ['api.botanicus.me', 'blog.botanicus.me', 'docker:build']
 
