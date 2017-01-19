@@ -1,9 +1,10 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router';
 import request from 'superagent';
-import { createStore } from 'redux';
 
 /*
+import { createStore } from 'redux';
+
 state {
   routes: {
     "/": {"posts": [...]},
