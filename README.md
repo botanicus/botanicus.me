@@ -12,10 +12,13 @@ EOF
 rake build
 rake run
 
-curl http://api.botanicus.dev/posts.json
-curl http://botanicus.dev/
+curl http://api.botanicus.dev:8000/posts.json
+curl http://botanicus.dev:8000/
 ```
 
 # Deployment
 
 TODO
+
+# Delete all containers
+docker rmi $(docker images -q)
