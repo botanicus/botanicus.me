@@ -12,6 +12,3 @@ COPY api.botanicus.me $ROOT/api.botanicus.me
 # Override the existing default vhost.
 COPY vhost.conf /etc/nginx/sites-enabled/botanicus.me.vhost
 COPY nginx.conf /etc/nginx/nginx.conf
-
-EXPOSE 80
-CMD nginx -g 'daemon off;'
