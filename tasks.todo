@@ -2,6 +2,10 @@ front-end: React + Redux.
   https://github.com/botanicus/blog
   react-blog
 
+// TODO: Use context instead:
+// https://facebook.github.io/react/docs/context.html
+
+
 # Set up a build server to compile the project and plug it between GH & Docker Cloud.
 
 So I can just use GH interface to write articles and I don't need to commit build/.
