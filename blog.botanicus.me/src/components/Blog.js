@@ -44,6 +44,18 @@ export class BlogIndex extends Component {
     // const { posts } = this.props;
     const { posts } = this.state;
 
+    if (posts) {
+      return this.renderPosts(posts);
+    } else {
+      return (
+        <div className="error">
+          Server error.
+        </div>
+      );
+    }
+  }
+
+  renderPosts(posts) {
     return (
       <div>
         {posts.map(post => this.renderPost(post))}
@@ -83,10 +95,14 @@ class BlogPostPreview extends Component {
   }
 }
 
-export class Discussion extends Component {
+class Discussion extends Component {
+  handleNewComment(comment) {
+    console.log(`Comment: ${comment.text}`);
+  }
+
   render() {
     return (
-      <Disqus shortname="example"
+      <Disqus shortname="botanicus-me"
               identifier="something-unique-12345"
               title="Example Thread"
               url="http://www.example.com/example-thread"
@@ -119,6 +135,8 @@ export class BlogPost extends Component {
         </p>
 
         <div dangerouslySetInnerHTML={{__html: post.body}} />
+
+      <Discussion />
       </div>
     );
   }
