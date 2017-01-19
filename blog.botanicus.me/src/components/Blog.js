@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { Component, propTypes } from 'react';
 import { Link } from 'react-router';
 import request from 'superagent';
 import { serverURL } from '../utils';
@@ -60,6 +60,14 @@ export class BlogIndex extends Component {
 }
 
 class BlogPostPreview extends Component {
+  static propTypes = {
+    post: propTypes.shape({
+      path: propTypes.string.isRequired,
+      title: propTypes.string.isRequired,
+      excerpt: propTypes.string.isRequired
+    }).isRequired
+  }
+
   render() {
     const { post } = this.props;
 
@@ -81,7 +89,7 @@ export class BlogPost extends Component {
   }
 
   componentDidMount() {
-    request.get(serverURL('${this.props.location.pathname}.json')).end((error, response) => {
+    request.get(serverURL(`${this.props.location.pathname}.json`)).end((error, response) => {
       this.setState({post: response.body});
     });
   }

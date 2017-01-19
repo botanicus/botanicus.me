@@ -6,11 +6,7 @@ front-end: React + Redux.
 // https://facebook.github.io/react/docs/context.html
 
 
-# Set up a build server to compile the project and plug it between GH & Docker Cloud.
-
-So I can just use GH interface to write articles and I don't need to commit build/.
-
-I might not need Docker hub anymore, only Docker cloud?
+# Set up Docker Hub / Docker Cloud (Or DC only?)
 
 # Misc
 
