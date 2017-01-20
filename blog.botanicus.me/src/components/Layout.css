@@ -4,11 +4,20 @@ body {
   font-family: sans-serif;
 }
 
-.App {
+/* Do not underline links. */
+h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
+  text-decoration: none;
+}
+
+.main-title a:visited {
+  color: inherit; /* Use whatever the default is, not purple. */
+}
+
+.app {
   text-align: center;
 }
 
-.App-header {
+.app-header {
   background-color: #222;
   height: 150px;
   padding: 20px;
