@@ -31,43 +31,54 @@ const store = createStore(reducer);
 export class BlogIndex extends Component {
   constructor(props) {
     super(props);
-    this.state = {posts: []};
+    this.state = {posts: [], isLoading: true};
   }
 
   // TODO: Handle 404s and others.
   componentDidMount() {
     request.get(serverURL('/posts.json')).end((error, response) => {
-      this.setState({posts: response.body});
+      this.setState({posts: response.body, error, isLoading: false});
     });
   }
 
   render() {
-    // const { posts } = this.props;
-    const { posts } = this.state;
+    const { posts, isLoading, error } = this.state;
 
-    if (posts) {
-      return this.renderPosts(posts);
-    } else {
+    if (isLoading) {
+      return (
+        <div>Loading ...</div>
+      );
+    }
+
+    if (error) {
+      console.error("Error", error);
+
       return (
         <div className="error">
           Server error.
         </div>
       );
     }
+
+    return this.renderPosts(posts);
   }
 
   renderPosts(posts) {
-    if (posts.length) {
-      return (
-        <div>
-          {posts.map(post => this.renderPost(post))}
-        </div>
-      );
-    } else {
-      return (
-        <div>There are no posts yet.</div>
-      );
+    if (!posts.length) {
+      return this.renderEmptyPostsNotice();
     }
+
+    return (
+      <div>
+        {posts.map(post => this.renderPost(post))}
+      </div>
+    );
+  }
+
+  renderEmptyPostsNotice() {
+    return (
+      <div>There are no posts yet.</div>
+    );
   }
 
   renderPost(post) {
