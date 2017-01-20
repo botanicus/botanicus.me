@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title></title>
+  <subtitle></subtitle>
+  <link href="/posts.atom" rel="self" />
+  <link href="" />
+  <id>urn:uuid:04612d59a29e8173505eb6b365fb100e</id>
+  <updated>2017-01-20</updated>
+
+  
+  <entry>
+    <title>My story</title>
+    <link href="/posts/my-story" />
+    <link rel="alternate" type="text/html" href="/posts/my-story"/>
+    <id>urn:uuid:c17fd1cc55cf5e0bc2daeff8b8ad67f4</id>
+    <updated>2017-01-20</updated>
+    <!-- TODO: strip HTML from excerpt -->
+    <summary>Excerpt</summary>
+<!--     <content type="xhtml">
+      <h1>My story</h1>
+<p>
+  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Soluta quibusdam necessitatibus tempore ullam incidunt amet omnis, veritatis dicta quisquam accusamus at provident vel facere corporis sed fugiat cumque. Consequuntur, necessitatibus!
+</p>
+    </content> -->
+    <author>
+      <name></name>
+      <email></email>
+    </author>
+  </entry>
+  
+</feed>
