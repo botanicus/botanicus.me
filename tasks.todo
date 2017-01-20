@@ -44,3 +44,27 @@ tags
 ## Redux, react-router-redux, React + GA
 
 ## Set up server-side code generating.
+
+/*
+import { createStore } from 'redux';
+
+state {
+  routes: {
+    "/": {"posts": [...]},
+    "/posts/learning-tango": {"title": ...},
+    "/tags/tango": {"posts": [...]}
+  }
+}
+
+... plug in react-router-redux.
+const reducer = (state = {}, action) => {
+  switch (action.type) {
+    case 'DATA_FETCHED':
+      return {};
+    default:
+      return state;
+  }
+}
+
+const store = createStore(reducer);
+*/

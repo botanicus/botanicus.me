@@ -4,30 +4,6 @@ import request from 'superagent';
 import { default as Disqus } from 'react-disqus-comments';
 import { serverURL } from '../utils';
 
-/*
-import { createStore } from 'redux';
-
-state {
-  routes: {
-    "/": {"posts": [...]},
-    "/posts/learning-tango": {"title": ...},
-    "/tags/tango": {"posts": [...]}
-  }
-}
-
-... plug in react-router-redux.
-const reducer = (state = {}, action) => {
-  switch (action.type) {
-    case 'DATA_FETCHED':
-      return {};
-    default:
-      return state;
-  }
-}
-
-const store = createStore(reducer);
-*/
-
 export class BlogIndex extends Component {
   constructor(props) {
     super(props);
@@ -37,7 +13,7 @@ export class BlogIndex extends Component {
   // TODO: Handle 404s and others.
   componentDidMount() {
     request.get(serverURL('/posts.json')).end((error, response) => {
-      this.setState({posts: response.body, error, isLoading: false});
+      this.setState({posts: response && response.body, error, isLoading: false});
     });
   }
 
@@ -51,11 +27,17 @@ export class BlogIndex extends Component {
     }
 
     if (error) {
+      window.e = error;
       console.error("Error", error);
 
       return (
         <div className="error">
-          Server error.
+          <h1>Server error.</h1>
+          <code>{error.message}</code>
+
+          <p>
+            Sorry about that. Please <a href="mailto:james@101ideas.cz">shoot me an email</a> and I'll fix it.
+          </p>
         </div>
       );
     }
