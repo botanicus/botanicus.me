@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import Link from '../lib/LinkToUnlessCurrent.js';
 import { TwitterIcon, GitHubIcon } from '../lib/icons';
+import Ribbon from 'react-github-fork-ribbon';
 import { BLOG_TITLE } from '../constants.js';
 import './Layout.css';
 
@@ -12,6 +13,10 @@ export class Layout extends Component {
   render() {
     return (
       <div className="app">
+        <Ribbon href="https://www.toptal.com/resume/james-c-russell">
+          Hire me on TopTal.com.
+        </Ribbon>
+
         <header>
           <h1 className="main-title">
             <Link to="/">El Blog</Link>
