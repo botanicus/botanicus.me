@@ -6,6 +6,8 @@ if (process.env.NODE_ENV === 'development') {
   API_BASE_URL = 'http://api.botanicus.me';
 }
 
+export const BLOG_TITLE = '@botanicus';
+
 export const GOOGLE_ANALYTICS_TRACKING_ID = 'UA-63572342-2';
 export const GOOGLE_ANALYTICS_COOKIE_DOMAIN = 'blog.botanicus.me';
 

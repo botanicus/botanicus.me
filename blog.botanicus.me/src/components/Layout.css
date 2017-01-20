@@ -9,17 +9,26 @@ h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
   text-decoration: none;
 }
 
-.main-title a:visited {
-  color: inherit; /* Use whatever the default is, not purple. */
-}
-
 .app {
   text-align: center;
 }
 
-.app-header {
+header {
   background-color: #222;
-  height: 150px;
+  height: 105px;
   padding: 20px;
   color: white;
+}
+
+.main-title a:visited {
+  color: inherit; /* Use whatever the default is, not purple. */
+}
+
+footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  background-color: #222;
+  color: white;
+  padding: 50px 0;
 }

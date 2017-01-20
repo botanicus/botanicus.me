@@ -1,18 +1,29 @@
 import React, { Component } from 'react';
 import Link from '../lib/LinkToUnlessCurrent.js';
+import { BLOG_TITLE } from '../constants.js';
 import './Layout.css';
 
 export class Layout extends Component {
+  componentDidMount() {
+    document.title = BLOG_TITLE;
+  }
+
   render() {
     return (
       <div className="app">
-        <div className="app-header">
+        <header>
           <h1 className="main-title">
             <Link to="/">El Blog</Link>
           </h1>
-        </div>
+        </header>
 
-        {this.props.children}
+        <main>
+          {this.props.children}
+        </main>
+
+        <footer>
+          &copy; James C Russell {new Date().getFullYear()}
+        </footer>
       </div>
     );
   }

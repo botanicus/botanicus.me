@@ -85,12 +85,12 @@ class BlogPostPreview extends Component {
     const { post } = this.props;
 
     return (
-      <div>
+      <article>
         <h2><Link to={post.path}>{post.title}</Link></h2>
-        <p id="excerpt">
+        <p className="excerpt">
           {post.excerpt}
         </p>
-      </div>
+      </article>
     );
   }
 }
@@ -128,8 +128,10 @@ export class BlogPost extends Component {
   }
 
   componentDidMount() {
+    document.title = 'MAIN TITLE: Loading ...';
     request.get(serverURL(`${this.props.location.pathname}.json`)).end((error, response) => {
       this.setState({post: response.body});
+      document.title = this.state.post.title;
     });
   }
 
@@ -137,16 +139,16 @@ export class BlogPost extends Component {
     const { post } = this.state;
 
     return (
-      <div>
+      <article>
         <h1>{post.title}</h1>
-        <p id="excerpt">
+        <p className="excerpt">
           {post.excerpt}
         </p>
 
         <div dangerouslySetInnerHTML={{__html: post.body}} />
 
         <Discussion title={post.title} />
-      </div>
+      </article>
     );
   }
 }
