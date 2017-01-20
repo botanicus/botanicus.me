@@ -1,7 +1,7 @@
 import React, { Component, PropTypes } from 'react';
 import { Link } from 'react-router';
 import request from 'superagent';
-import { ReactDisqusComments as Disqus } from 'react-disqus-comments';
+import { default as Disqus } from 'react-disqus-comments';
 import { serverURL } from '../utils';
 
 /*
@@ -101,6 +101,7 @@ class Discussion extends Component {
   }
 
   render() {
+    console.log(Disqus); ////
     return (
       <Disqus shortname="botanicus-me"
               identifier="something-unique-12345"
