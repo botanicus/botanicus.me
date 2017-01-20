@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import Link from '../lib/LinkToUnlessCurrent.js';
+import { TwitterIcon, GitHubIcon } from '../lib/icons';
 import { BLOG_TITLE } from '../constants.js';
 import './Layout.css';
 
@@ -22,7 +23,10 @@ export class Layout extends Component {
         </main>
 
         <footer>
-          &copy; James C Russell {new Date().getFullYear()}
+          <ul>
+            <li><TwitterIcon username='botanicus' /></li>
+            <li><GitHubIcon  username='botanicus' /></li>
+          </ul>
         </footer>
       </div>
     );

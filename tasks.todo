@@ -20,7 +20,9 @@ front-end: React + Redux.
 # After eject
 
 ## CSS modules.
-  ? https://github.com/css-modules/postcss-modules
+  https://babeljs.io/docs/usage/babel-register/#usage-ignores-node-modules-by-default !
+  -> react-icons OK
+
   https://github.com/css-modules/webpack-demo
 
   Start with https://github.com/webpack/css-loader#css-modules, but there's also
