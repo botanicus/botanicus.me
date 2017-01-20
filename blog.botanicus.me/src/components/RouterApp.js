@@ -8,7 +8,6 @@ import BlogIndex from './BlogIndex.js';
 import BlogPost from './BlogPost.js';
 
 import Tag from './Tag.js';
-import TagList from './TagList.js';
 
 import About from './About.js';
 import NotFound from './NotFound.js'
@@ -28,7 +27,6 @@ export default class RouterApp extends Component {
           <Route path='/about' component={About} />
           <Route path='/posts/:slug' component={BlogPost} />
           <Route path='/tags/:slug' component={Tag} />
-          <Route path='/tags' component={TagList} />
           <Route path='*' component={NotFound} />
         </Route>
       </Router>

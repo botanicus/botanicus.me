@@ -1,28 +1,51 @@
 import React, { Component } from 'react';
 import request from 'superagent';
 import Discussion from './Discussion.js';
+import TagList from './TagList.js';
 import { serverURL } from '../utils';
 
 export default class BlogPost extends Component {
   constructor(props) {
     super(props);
-    this.state = {post: {}};
+    this.state = {post: {}, isLoading: true};
   }
 
   componentDidMount() {
     document.title = 'MAIN TITLE: Loading ...';
     request.get(serverURL(`${this.props.location.pathname}.json`)).end((error, response) => {
-      this.setState({post: response.body});
+      this.setState({post: response && response.body, error, isLoading: false});
       document.title = this.state.post.title;
     });
   }
 
   render() {
-    const { post } = this.state;
+    const { post, isLoading, error } = this.state;
+
+    if (isLoading) {
+      return (
+        <div>Loading ...</div>
+      );
+    }
+
+    if (error) {
+      console.error("Error", error);
+
+      return (
+        <div className="error">
+          <h1>Server error.</h1>
+          <code>{error.message}</code>
+
+          <p>
+            Sorry about that. Please <a href="mailto:james@101ideas.cz">shoot me an email</a> and I'll fix it.
+          </p>
+        </div>
+      );
+    }
 
     return (
       <article>
         <h1>{post.title}</h1>
+        <TagList tags={post.tags} />
         <p className="excerpt">
           {post.excerpt}
         </p>
