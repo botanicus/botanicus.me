@@ -1,17 +1,19 @@
 import React, { Component } from 'react';
 import { Router, Route, IndexRoute, browserHistory } from 'react-router';
+
+import GoogleAnalytics from '../GoogleAnalytics.js';
+
 import { Layout } from './Layout.js';
 import { BlogIndex, BlogPost } from './Blog.js';
-import './Layout.css';
+import NotFound from './NotFound.js'
 
+browserHistory.listen((location) => {
+  console.debug(`~ Google Analytics page view ${location.pathname}.`);
+  GoogleAnalytics.set({page: location.pathname});
+  GoogleAnalytics.pageview(location.pathname);
+});
 
-class NotFound extends Component {
-  render() {
-    return (<h1>404</h1>);
-  }
-}
-
-export default class App extends Component {
+export default class RouterApp extends Component {
   render() {
     return (
       <Router history={browserHistory}>

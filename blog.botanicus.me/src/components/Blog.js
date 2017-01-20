@@ -1,5 +1,5 @@
 import React, { Component, PropTypes } from 'react';
-import { Link } from 'react-router';
+import Link from '../lib/LinkToUnlessCurrent.js';
 import request from 'superagent';
 import { default as Disqus } from 'react-disqus-comments';
 import { serverURL } from '../utils';

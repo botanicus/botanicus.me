@@ -5,22 +5,17 @@ front-end: React + Redux.
 // TODO: Use context instead:
 // https://facebook.github.io/react/docs/context.html
 
-
-# Set up Docker Hub / Docker Cloud (Or DC only?)
-
-# Misc
-
-## Assets handling in blog-generator
-
-# Redux
-
-## Set up Redux and react-router-redux
-
 # Services
 
 ## Set up Disqus (or something)
 
 ## Set up Google Analytics
+
+# Import blog posts
+
+# Misc
+
+## Assets handling in blog-generator
 
 # After eject
 
@@ -39,5 +34,9 @@ front-end: React + Redux.
   http://postcss.org/
   http://css4.rocks/
   http://cssnext.io/
+
+# Later
+
+## Redux, react-router-redux, React + GA
 
 ## Set up server-side code generating.
