@@ -4,6 +4,7 @@ front-end: React + Redux.
 
 Import blog posts
 Assets handling in blog-generator
+Dependencies on other articles -> fail.
 API: ignore draft: true
 About page (i. e. https://zenhabits.net/about)
 RSS (global + per tag)
