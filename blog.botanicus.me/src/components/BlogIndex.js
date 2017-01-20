@@ -13,7 +13,7 @@ export default class BlogIndex extends Component {
     document.title = 'MAIN TITLE: Loading ...';
     request.get(serverURL('/posts.json')).end((error, response) => {
       this.setState({posts: response && response.body, error, isLoading: false});
-      document.title = this.state.post.title;
+      this.state.post && (document.title = this.state.post.title);
     });
   }
 

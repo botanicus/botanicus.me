@@ -2,6 +2,7 @@ front-end: React + Redux.
   https://github.com/botanicus/blog
   react-blog
 
+relative published date
 Import blog posts
 Assets handling in blog-generator
 Dependencies on other articles -> fail.
