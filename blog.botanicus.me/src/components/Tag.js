@@ -3,22 +3,23 @@ import request from 'superagent';
 import { serverURL } from '../utils';
 import BlogPostList from './BlogPostList.js';
 
-export default class BlogIndex extends Component {
+export default class Tag extends Component {
   constructor(props) {
     super(props);
-    this.state = {posts: [], isLoading: true};
+    this.state = {tag: {}, isLoading: true};
   }
 
   componentDidMount() {
     document.title = 'MAIN TITLE: Loading ...';
-    request.get(serverURL('/posts.json')).end((error, response) => {
-      this.setState({posts: response && response.body, error, isLoading: false});
-      document.title = this.state.post.title;
+    request.get(serverURL(`${this.props.location.pathname}.json`)).end((error, response) => {
+      this.setState({tag: response && response.body, error, isLoading: false});
+      document.title = this.state.tag.tag.title;
     });
   }
 
+  // tag.feed
   render() {
-    const { posts, isLoading, error } = this.state;
+    const { tag, isLoading, error } = this.state;
 
     if (isLoading) {
       return (
@@ -41,6 +42,11 @@ export default class BlogIndex extends Component {
       );
     }
 
-    return <BlogPostList posts={posts} />;
+    return (
+      <article>
+        <h1>{tag.title}</h1>
+        <BlogPostList posts={tag.posts} />
+      </article>
+    );
   }
 }
