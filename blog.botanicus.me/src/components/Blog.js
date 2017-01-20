@@ -96,18 +96,26 @@ class BlogPostPreview extends Component {
 }
 
 class Discussion extends Component {
+  static contextTypes = {
+    router: PropTypes.object.isRequired
+  }
+
   handleNewComment(comment) {
     console.log(`Comment: ${comment.text}`);
   }
 
+  // Disqus uses location.href as the identifier by default.
+  // In case domain or protocol would be changed, everything
+  // would break, so using location.pathname is better, although
+  // not perfect either since URL could possibly change.
   render() {
-    console.log(Disqus); ////
+    const location = this.context.router.getCurrentLocation();
+
     return (
       <Disqus shortname="botanicus-me"
-              identifier="something-unique-12345"
-              title="Example Thread"
-              url="http://www.example.com/example-thread"
-              category_id="123456"
+              identifier={location.pathname}
+              title={this.props.title}
+              url={location.href}
               onNewComment={this.handleNewComment} />
     );
   }
@@ -137,7 +145,7 @@ export class BlogPost extends Component {
 
         <div dangerouslySetInnerHTML={{__html: post.body}} />
 
-      <Discussion />
+        <Discussion title={post.title} />
       </div>
     );
   }

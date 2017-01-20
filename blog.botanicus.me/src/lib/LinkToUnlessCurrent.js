@@ -17,7 +17,6 @@ export default class LinkToUnlessCurrent extends Component {
     if (location.pathname === this.props.to) {
       return <span>{this.props.children}</span>;
     } else {
-      // TODO
       return <Link {...this.props} />;
     }
   }
