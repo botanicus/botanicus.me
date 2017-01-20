@@ -5,7 +5,7 @@ import FaGithub from 'react-icons/lib/fa/github';
 export class TwitterIcon extends Component {
   render() {
     return (
-      <a className="social" href={`https://twitter.com/${this.props.username}`}>
+      <a className="social" href={`https://twitter.com/${this.props.username}`} target="_blank">
         <FaTwitter size={this.props.size} />
       </a>
     );
@@ -15,7 +15,7 @@ export class TwitterIcon extends Component {
 export class GitHubIcon extends Component {
   render() {
     return (
-      <a className="social" href={`https://github.com/${this.props.username}`}>
+      <a className="social" href={`https://github.com/${this.props.username}`} target="_blank">
         <FaGithub size={this.props.size} />
       </a>
     );

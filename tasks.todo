@@ -6,6 +6,12 @@ Import blog posts
 Assets handling in blog-generator
 API: ignore draft: true
 About page (i. e. https://zenhabits.net/about)
+RSS (global + per tag)
+    // <link rel="alternate" type="application/atom+xml" title="News" href="/atom.xml?type=news" />
+    https://github.com/nfl/react-helmet or https://github.com/josepapaianni/react-declarative-head
+Hire-me-ribbon: target="_blank"
+Test in browsers (screenshots?)
+Feed: rewrite in Nginx the URL so it doesn't appear to be on api, but rather on blog.
 
 
 README: hint that MyStory is required.

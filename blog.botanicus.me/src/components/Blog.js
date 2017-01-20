@@ -57,11 +57,17 @@ export class BlogIndex extends Component {
   }
 
   renderPosts(posts) {
-    return (
-      <div>
-        {posts.map(post => this.renderPost(post))}
-      </div>
-    );
+    if (posts.length) {
+      return (
+        <div>
+          {posts.map(post => this.renderPost(post))}
+        </div>
+      );
+    } else {
+      return (
+        <div>There are no posts yet.</div>
+      );
+    }
   }
 
   renderPost(post) {

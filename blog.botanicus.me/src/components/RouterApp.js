@@ -3,7 +3,7 @@ import { Router, Route, IndexRoute, browserHistory } from 'react-router';
 
 import GoogleAnalytics from '../GoogleAnalytics.js';
 
-import { Layout } from './Layout.js';
+import Layout from './Layout.js';
 import { BlogIndex, BlogPost } from './Blog.js';
 import About from './About.js';
 import NotFound from './NotFound.js'

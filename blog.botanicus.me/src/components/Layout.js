@@ -5,7 +5,7 @@ import Ribbon from 'react-github-fork-ribbon';
 import { BLOG_TITLE } from '../constants.js';
 import './Layout.css';
 
-export class Layout extends Component {
+export default class Layout extends Component {
   componentDidMount() {
     document.title = BLOG_TITLE;
   }
