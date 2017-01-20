@@ -31,6 +31,7 @@ export class Layout extends Component {
           <ul>
             <li><TwitterIcon username='botanicus' /></li>
             <li><GitHubIcon  username='botanicus' /></li>
+            <li><Link to="/about">about</Link></li>
           </ul>
         </footer>
       </div>

@@ -2,26 +2,22 @@ front-end: React + Redux.
   https://github.com/botanicus/blog
   react-blog
 
-// TODO: Use context instead:
-// https://facebook.github.io/react/docs/context.html
+Import blog posts
+Assets handling in blog-generator
+API: ignore draft: true
+About page (i. e. https://zenhabits.net/about)
 
-# Services
 
-## Set up Disqus (or something)
+README: hint that MyStory is required.
 
-## Set up Google Analytics
+svg css transformation spinner
+tags
 
-# Import blog posts
-
-# Misc
-
-## Assets handling in blog-generator
+## Mailing list
 
 # After eject
 
 ## CSS modules.
-  https://babeljs.io/docs/usage/babel-register/#usage-ignores-node-modules-by-default !
-  -> react-icons OK
 
   https://github.com/css-modules/webpack-demo
 

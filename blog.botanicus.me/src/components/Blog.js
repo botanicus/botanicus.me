@@ -34,6 +34,7 @@ export class BlogIndex extends Component {
     this.state = {posts: []};
   }
 
+  // TODO: Handle 404s and others.
   componentDidMount() {
     request.get(serverURL('/posts.json')).end((error, response) => {
       this.setState({posts: response.body});

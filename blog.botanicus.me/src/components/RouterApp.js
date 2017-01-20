@@ -5,6 +5,7 @@ import GoogleAnalytics from '../GoogleAnalytics.js';
 
 import { Layout } from './Layout.js';
 import { BlogIndex, BlogPost } from './Blog.js';
+import About from './About.js';
 import NotFound from './NotFound.js'
 
 browserHistory.listen((location) => {
@@ -19,6 +20,7 @@ export default class RouterApp extends Component {
       <Router history={browserHistory}>
         <Route path='/' component={Layout}>
           <IndexRoute component={BlogIndex} />
+          <Route path='/about' component={About} />
           <Route path='/posts/:slug' component={BlogPost} />
           <Route path='*' component={NotFound} />
         </Route>
