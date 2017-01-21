@@ -5,9 +5,11 @@ services:
   - docker
 
 before_install:
-  - gem install blog-generator
   # http://stackoverflow.com/questions/18419144/npm-not-working-read-econnreset
   - npm config set registry http://registry.npmjs.org/
+
+install:
+  - gem install blog-generator
   - cd blog.botanicus.me && npm install
 
 script:

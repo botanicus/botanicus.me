@@ -13,13 +13,14 @@ export default class LinkToUnlessCurrent extends Component {
   }
 
   render() {
-    const { children } = this.props;
+    const { to, children } = this.props;
     const location = this.context.router.getCurrentLocation();
 
-    if (location.pathname === this.props.to) {
-      return <span>{this.props.hide ? '' : children}</span>;
+    if (location.pathname === to) {
+      const style = this.props.hide ? {display: 'none'} : {};
+      return <span style={style}>{children}</span>;
     } else {
-      return <Link {...this.props} />;
+      return <Link to={to}>{children}</Link>;
     }
   }
 }
