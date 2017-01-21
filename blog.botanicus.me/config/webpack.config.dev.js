@@ -109,7 +109,7 @@ module.exports = {
         exclude: [
           /\.html$/,
           /\.(js|jsx)$/,
-          /\.css$/,
+          /\.m?css$/,
           /\.json$/,
           /\.svg$/
         ],
@@ -140,7 +140,6 @@ module.exports = {
       {
         test: /\.css$/,
         loader: 'style!css?importLoaders=1!postcss'
-        // loader: 'style!css?modules=true&importLoaders=1!postcss'
       },
       // CSS modules.
       {

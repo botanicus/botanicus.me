@@ -1,0 +1,13 @@
+.loading {
+  color: #aaa;
+}
+
+.spinner {
+  animation: spinner-spin infinite 20s linear;
+  height: 80px;
+}
+
+@keyframes spinner-spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
