@@ -1,7 +1,9 @@
 import React, { Component } from 'react';
 import request from 'superagent';
-import { serverURL } from '../utils';
-import BlogPostList from './BlogPostList.js';
+import { serverURL } from '../../utils';
+import Spinner from '../lib/Spinner.js';
+import ServerError from '../lib/ServerError.js';
+import BlogPostList from '../BlogPostList.js';
 
 export default class Tag extends Component {
   constructor(props) {
@@ -22,24 +24,11 @@ export default class Tag extends Component {
     const { tag, isLoading, error } = this.state;
 
     if (isLoading) {
-      return (
-        <div>Loading ...</div>
-      );
+      return <Spinner />;
     }
 
     if (error) {
-      console.error("Error", error);
-
-      return (
-        <div className="error">
-          <h1>Server error.</h1>
-          <code>{error.message}</code>
-
-          <p>
-            Sorry about that. Please <a href="mailto:james@101ideas.cz">shoot me an email</a> and I'll fix it.
-          </p>
-        </div>
-      );
+      return <ServerError error={error} />;
     }
 
     return (

@@ -1,5 +1,5 @@
 import React, { Component, PropTypes } from 'react';
-import Link from '../lib/LinkToUnlessCurrent.js';
+import Link from './lib/LinkToUnlessCurrent.js';
 import TagList from './TagList.js';
 import TimeAgo from 'react-timeago';
 

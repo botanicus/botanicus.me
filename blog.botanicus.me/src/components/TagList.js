@@ -1,5 +1,5 @@
 import React, { Component, PropTypes } from 'react';
-import Link from '../lib/LinkToUnlessCurrent.js';
+import Link from './lib/LinkToUnlessCurrent.js';
 
 export default class TagList extends Component {
   static propTypes = {

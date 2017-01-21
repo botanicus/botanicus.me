@@ -4,10 +4,10 @@ import { Router, Route, IndexRoute, browserHistory } from 'react-router';
 import GoogleAnalytics from '../GoogleAnalytics.js';
 
 import Layout from './Layout.js';
-import BlogIndex from './BlogIndex.js';
-import BlogPost from './BlogPost.js';
+import BlogIndex from './containers/BlogIndex.js';
+import BlogPost from './containers/BlogPost.js';
 
-import Tag from './Tag.js';
+import Tag from './containers/Tag.js';
 
 import About from './About.js';
 import NotFound from './NotFound.js'
