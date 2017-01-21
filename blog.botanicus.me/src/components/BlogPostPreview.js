@@ -1,6 +1,5 @@
 import React, { Component, PropTypes } from 'react';
 import BlogPostMeta from './BlogPostMeta.js';
-import TagList from './TagList.js';
 
 export default class BlogPostPreview extends Component {
   static propTypes = {

@@ -18,6 +18,8 @@ a {
 .app {
   text-align: center;
 }
+article p { text-align: left; }
+abbr[title] { border-bottom: 2px dotted #aaa; }
 
 header {
   background-color: #222;

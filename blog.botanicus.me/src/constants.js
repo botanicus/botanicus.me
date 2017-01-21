@@ -7,6 +7,7 @@ if (process.env.NODE_ENV === 'development') {
 }
 
 export const BLOG_TITLE = '@botanicus';
+export const TOPTAL_PROFILE_URL = 'https://www.toptal.com/resume/james-c-russell';
 
 export const GOOGLE_ANALYTICS_TRACKING_ID = 'UA-63572342-2';
 export const GOOGLE_ANALYTICS_COOKIE_DOMAIN = 'blog.botanicus.me';
