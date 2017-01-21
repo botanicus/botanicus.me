@@ -1,4 +1,5 @@
 import React, { Component, PropTypes } from 'react';
+import Link from '../lib/LinkToUnlessCurrent.js';
 import TagList from './TagList.js';
 import TimeAgo from 'react-timeago';
 
@@ -26,9 +27,16 @@ export default class BlogPostMeta extends Component {
     const { post } = this.props;
 
     return (
-      <div style={{fontStyle: 'italic'}}>
-        Published <TimeAgo date={post.published_at} />
-        {this.showUpdatedIfWasUpdated(post)}.
+      <div>
+        <h2>
+          <Link to={post.path}>{post.title}</Link>
+          <TagList tags={post.tags} />
+        </h2>
+
+        <div style={{fontStyle: 'italic'}}>
+          Published <TimeAgo date={post.published_at} />
+          {this.showUpdatedIfWasUpdated(post)}.
+        </div>
       </div>
     );
   }

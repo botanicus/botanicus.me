@@ -44,7 +44,6 @@ export default class BlogPost extends Component {
 
     return (
       <article>
-        <h1>{post.title}</h1>
         <BlogPostMeta post={post} />
         <p className="excerpt">
           {post.excerpt}
