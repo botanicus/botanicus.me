@@ -14,7 +14,7 @@ export default class About extends Component {
       <article>
         <h1>About me</h1>
         <div style={{float: 'left', marginRight: 25}}>
-          <img src={profileImageURL} />
+          <img src={profileImageURL} role="presentation" />
           <div style={{color: "#aaa", fontStyle: 'italic', fontSize: 18}}>
             {/* This text shouldn't be longer than the image is wide. */}
             As I said, dancing and <br />suits keeps me happy.
@@ -48,7 +48,7 @@ export default class About extends Component {
         <h2 style={{clear: 'left'}}>Contact</h2>
         <p>
           <strong>Professional:</strong> If you want to hire me, please go through
-          my <a href={TOPTAL_PROFILE_URL} _target="blank">TopTal.com profile</a>.
+          my <a href={TOPTAL_PROFILE_URL} target="_blank">TopTal.com profile</a>.
         </p>
 
         <p>
