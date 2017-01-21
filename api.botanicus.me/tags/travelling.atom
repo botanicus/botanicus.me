@@ -3,7 +3,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
   <title></title>
   <subtitle></subtitle>
-  <link href="/posts.atom" rel="self" />
+  <link href="/travelling.atom" rel="self" />
   <link href="" />
   <id>urn:uuid:04612d59a29e8173505eb6b365fb100e</id>
   <updated>2017-01-21</updated>

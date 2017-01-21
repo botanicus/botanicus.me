@@ -25,5 +25,5 @@
   "excerpt": "Excerpt",
   "path": "/posts/my-story",
   "updated_at": "2017-01-21 00:27:53 UTC",
-  "body": "<h1>My story</h1>\n<p>\n  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Soluta quibusdam necessitatibus tempore ullam incidunt amet omnis, veritatis dicta quisquam accusamus at provident vel facere corporis sed fugiat cumque. Consequuntur, necessitatibus!\n</p>"
+  "body": "<p>\n  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Soluta quibusdam necessitatibus tempore ullam incidunt amet omnis, veritatis dicta quisquam accusamus at provident vel facere corporis sed fugiat cumque. Consequuntur, necessitatibus!\n</p>"
 }
