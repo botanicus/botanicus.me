@@ -5,8 +5,8 @@ export default class Spinner extends Component {
   render() {
     return (
       <div>
-        <FaSpinner />
-        <span style={{color: "#aaa"}}>Loading ...</span>
+        <FaSpinner className="spinner" />
+        &nbsp;<span style={{color: "#aaa"}}>Loading ...</span>
       </div>
     );
   }

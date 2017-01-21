@@ -61,3 +61,13 @@ footer ul li { display: inline; padding: 5px; }
 /*.tag-list li:after { content: ","; color: #aaa; }*/
 /*.tag-list li:last-child:after { content: "."; }*/
 /*.tag-list li:nth-last-child(2):after { content: " and"; }*/
+
+.spinner {
+  animation: spinner-spin infinite 20s linear;
+  height: 80px;
+}
+
+@keyframes spinner-spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
