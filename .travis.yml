@@ -10,10 +10,9 @@ before_install:
 
 install:
   - gem install blog-generator
-  - cd blog.botanicus.me && npm install
 
 script:
-  - cd blog.botanicus.me && npm test
+  - cd blog.botanicus.me && npm install && npm test
   - rake build
 
 after_success:

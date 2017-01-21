@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import Link from '../lib/LinkToUnlessCurrent.js';
 import MyStory from '../../../api.botanicus.me/posts/my-story.json';
+import metadata from '../../../api.botanicus.me/metadata.json';
 import { TOPTAL_PROFILE_URL } from '../constants.js';
 import profileImageURL from '../img/profile.jpg';
 
@@ -65,6 +66,11 @@ export default class About extends Component {
         <p>
           I do not currently use any phone and I do not check Twitter or my
           personal email very often. I agree it's nuts, but I just like it this way.
+        </p>
+
+        <p style={{color: '#aaa', fontStyle: 'bold'}}>
+          Would you like to get notified about my new posts?
+          &nbsp;<a href={metadata.feed}>RSS</a> | email | twitter
         </p>
       </article>
     );
