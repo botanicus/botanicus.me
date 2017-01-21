@@ -13,7 +13,7 @@ export default class Tag extends Component {
     document.title = 'MAIN TITLE: Loading ...';
     request.get(serverURL(`${this.props.location.pathname}.json`)).end((error, response) => {
       this.setState({tag: response && response.body, error, isLoading: false});
-      document.title = this.state.tag.tag.title;
+      document.title = `Tag ${this.state.tag.tag.title}`;
     });
   }
 
@@ -44,7 +44,7 @@ export default class Tag extends Component {
 
     return (
       <article>
-        <h1>{tag.title}</h1>
+        <h1 style={{textTransform: 'capitalize'}}>{tag.tag.title}</h1>
         <BlogPostList posts={tag.posts} />
       </article>
     );

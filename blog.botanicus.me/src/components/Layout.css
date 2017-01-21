@@ -11,7 +11,7 @@ html, body {
 }
 
 /* Do not underline links. */
-h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
+a {
   text-decoration: none;
 }
 
@@ -52,5 +52,10 @@ footer ul { list-style-type: none; }
 footer ul li { display: inline; padding: 5px; }
 
 
+.tag-list { padding: 5px 0; }
 .tag-list { font-style: italic; list-style-type: none; display: inline; }
-.tag-list li { display: inline; padding: 5px; }
+.tag-list li { display: inline; padding: 3px; }
+.tag-list li:before { content: "#"; color: #aaa; }
+/*.tag-list li:after { content: ","; color: #aaa; }*/
+/*.tag-list li:last-child:after { content: "."; }*/
+/*.tag-list li:nth-last-child(2):after { content: " and"; }*/

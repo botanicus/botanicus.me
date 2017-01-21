@@ -1,3 +1,20 @@
 [
-
+  {
+    "title": "travelling",
+    "slug": "travelling",
+    "path": "/tags/travelling",
+    "feed": "/travelling.atom"
+  },
+  {
+    "title": "dancing",
+    "slug": "dancing",
+    "path": "/tags/dancing",
+    "feed": "/dancing.atom"
+  },
+  {
+    "title": "life",
+    "slug": "life",
+    "path": "/tags/life",
+    "feed": "/life.atom"
+  }
 ]

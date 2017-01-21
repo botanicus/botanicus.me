@@ -25,5 +25,5 @@ task build: ['api.botanicus.me', 'blog.botanicus.me', 'docker:build']
 
 desc 'Run the web server.'
 task :run do
-  sh 'docker run -it -p 8000:80 -v api.botanicus.me:/webs/botanicus.me/api.botanicus.me -v $PWD/blog.botanicus.me/build:/webs/botanicus.me/botanicus.me botanicus/botanicus.me'
+  sh "docker run -it -p 8000:80 -v #{Dir.pwd}/api.botanicus.me:/webs/api.botanicus.me -v #{Dir.pwd}/blog.botanicus.me/build:/webs/blog.botanicus.me botanicus/botanicus.me"
 end

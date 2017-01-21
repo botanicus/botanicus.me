@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import request from 'superagent';
 import Discussion from './Discussion.js';
-import TagList from './TagList.js';
+import BlogPostMeta from './BlogPostMeta.js';
 import { serverURL } from '../utils';
 
 export default class BlogPost extends Component {
@@ -45,7 +45,7 @@ export default class BlogPost extends Component {
     return (
       <article>
         <h1>{post.title}</h1>
-        <TagList tags={post.tags} />
+        <BlogPostMeta post={post} />
         <p className="excerpt">
           {post.excerpt}
         </p>

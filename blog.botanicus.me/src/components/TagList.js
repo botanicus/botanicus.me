@@ -22,13 +22,12 @@ export default class TagList extends Component {
   render() {
     const { tags } = this.props;
 
+    if (!tags.length) return <span />;
+
     return (
-      <div>
-        Tags:
-        <ul className="tag-list">
-          {tags.map(tag => this.renderTag(tag))}
-        </ul>
-      </div>
+      <ul className="tag-list">
+        {tags.map(tag => this.renderTag(tag))}
+      </ul>
     );
   }
 }
