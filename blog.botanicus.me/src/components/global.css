@@ -1,0 +1,8 @@
+/* Global CSS, rules that affects every element of a kind. */
+a {
+  text-decoration: none;
+}
+
+abbr[title] {
+  border-bottom: 2px dotted #aaa;
+}

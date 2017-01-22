@@ -3,6 +3,7 @@ import Link from './lib/LinkToUnlessCurrent.js';
 import MyStory from '../../../api.botanicus.me/posts/my-story.json';
 import { TOPTAL_PROFILE_URL } from '../constants.js';
 import profileImageURL from '../img/profile.jpg';
+import style from './About.mcss';
 
 export default class About extends Component {
   componentDidMount() {

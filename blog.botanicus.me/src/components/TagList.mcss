@@ -1,0 +1,21 @@
+.list {
+  padding-left: 15px;
+  font-size: 20px;
+  font-weight: normal; /* Since it's in <h3>. */
+  font-style: italic;
+  list-style-type: none;
+  display: inline;
+}
+
+.list li {
+  display: inline;
+  padding: 3px;
+}
+
+.list li:before {
+  content: "#"; color: #aaa;
+}
+
+/*.list li:after { content: ","; color: #aaa; }*/
+/*.list li:last-child:after { content: "."; }*/
+/*.list li:nth-last-child(2):after { content: " and"; }*/

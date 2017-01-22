@@ -3,7 +3,8 @@ import Link from './lib/LinkToUnlessCurrent.js';
 import { TwitterIcon, GitHubIcon } from './lib/icons';
 import Ribbon from 'react-github-fork-ribbon';
 import { BLOG_TITLE, TOPTAL_PROFILE_URL } from '../constants.js';
-import './Layout.css';
+import './global.css';
+import style from './Layout.mcss';
 
 export default class Layout extends Component {
   componentDidMount() {
@@ -12,25 +13,25 @@ export default class Layout extends Component {
 
   render() {
     return (
-      <div className="app">
+      <div>
         <Ribbon href={TOPTAL_PROFILE_URL}>
           Hire me on TopTal.com.
         </Ribbon>
 
-        <header>
-          <h1 className="main-title">
+        <header className={style.header}>
+          <h1 className={style.title}>
             <Link to="/">El Blog</Link>
           </h1>
         </header>
 
-        <main>
+        <main className={style.main}>
           {this.props.children}
         </main>
 
-        <footer>
+        <footer className={style.footer}>
           <ul>
-            <li><TwitterIcon username='botanicus' /></li>
-            <li><GitHubIcon  username='botanicus' /></li>
+            <li><TwitterIcon username="botanicus" /></li>
+            <li><GitHubIcon  username="botanicus" /></li>
             <li><Link to="/about" hide>about</Link></li>
           </ul>
         </footer>

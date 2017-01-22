@@ -1,5 +1,6 @@
 import React, { Component, PropTypes } from 'react';
 import Link from './lib/LinkToUnlessCurrent.js';
+import style from './TagList.mcss';
 
 export default class TagList extends Component {
   static propTypes = {
@@ -25,7 +26,7 @@ export default class TagList extends Component {
     if (!tags.length) return <span />;
 
     return (
-      <ul className="tag-list">
+      <ul className={style.list}>
         {tags.map(tag => this.renderTag(tag))}
       </ul>
     );
