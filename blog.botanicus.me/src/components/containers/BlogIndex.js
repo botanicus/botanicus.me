@@ -12,10 +12,9 @@ export default class BlogIndex extends Component {
   }
 
   componentDidMount() {
-    document.title = 'MAIN TITLE: Loading ...';
+    document.title = 'Blog of James C Russell';
     request.get(serverURL('/posts.json')).end((error, response) => {
       this.setState({posts: response && response.body, error, isLoading: false});
-      this.state.post && (document.title = this.state.post.title);
     });
   }
 

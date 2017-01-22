@@ -12,7 +12,7 @@ export default class Tag extends Component {
   }
 
   componentDidMount() {
-    document.title = 'MAIN TITLE: Loading ...';
+    document.title = `Tag ${this.props.params.slug} (loading)`;
     request.get(serverURL(`${this.props.location.pathname}.json`)).end((error, response) => {
       this.setState({tag: response && response.body, error, isLoading: false});
       document.title = `Tag ${this.state.tag.tag.title}`;

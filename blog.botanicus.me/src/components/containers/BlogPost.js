@@ -12,7 +12,7 @@ export default class BlogPost extends Component {
   }
 
   componentDidMount() {
-    document.title = 'MAIN TITLE: Loading ...';
+    document.title = `Post ${this.props.params.slug} (loading)`; // This one doesn't have any effect if we set document.title 2 in one method.
     request.get(serverURL(`${this.props.location.pathname}.json`)).end((error, response) => {
       this.setState({post: response && response.body, error, isLoading: false});
       document.title = this.state.post.title;
