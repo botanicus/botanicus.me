@@ -59,7 +59,7 @@ export default class About extends Component {
 
         <p>
           <strong>Personal:</strong> If we have ever met, you're welcome to add me
-          on <a href="https://www.facebook.com/botanicus">FB</a>. I do not accept
+          on <a href="https://www.facebook.com/botanicus" target="_blank">FB</a>. I do not accept
           friend requests from people I don't remember meeting in person.
         </p>
 
