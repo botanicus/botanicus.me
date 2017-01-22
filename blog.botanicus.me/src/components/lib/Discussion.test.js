@@ -1,8 +1,8 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
+import { shallow } from 'enzyme';
 import Discussion from './Discussion.js';
 
 it('renders without crashing', () => {
-  // const div = document.createElement('div');
-  // ReactDOM.render(<Discussion />, div);
+  const wrapper = shallow(<Discussion />);
+  // TODO.
 });

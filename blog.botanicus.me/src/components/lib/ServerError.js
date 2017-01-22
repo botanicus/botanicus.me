@@ -1,3 +1,9 @@
+/*
+  Be aware of what contact methods do you list on your /about page.
+
+  At the moment I show my email, while I say I don't use an email. Hmm.
+*/
+
 import React, { Component, PropTypes } from 'react';
 
 export default class ServerError extends Component {

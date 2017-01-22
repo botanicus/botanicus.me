@@ -8,17 +8,18 @@ export default class LinkToUnlessCurrent extends Component {
     children: PropTypes.oneOfType([PropTypes.string, PropTypes.element]).isRequired
   }
 
-  static contextTypes = {
-    router: PropTypes.object.isRequired
-  }
+  // This requires React router and it is hard to test.
+  // static contextTypes = {
+  //   router: PropTypes.object.isRequired
+  // }
 
   render() {
     const { to, children } = this.props;
-    const location = this.context.router.getCurrentLocation();
+    // const location = this.context.router.getCurrentLocation();
+    // return <span>{location.pathname}, {to}</span>
 
     if (location.pathname === to) {
-      const style = this.props.hide ? {display: 'none'} : {};
-      return <span style={style}>{children}</span>;
+      return this.props.hide ? <span /> : <span>{children}</span>;
     } else {
       return <Link to={to}>{children}</Link>;
     }

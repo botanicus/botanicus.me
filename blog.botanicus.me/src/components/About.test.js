@@ -1,8 +1,8 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
+import { shallow } from 'enzyme';
 import About from './About.js';
 
 it('renders without crashing', () => {
-  // const div = document.createElement('div');
-  // ReactDOM.render(<About />, div);
+  const wrapper = shallow(<About />);
+  // TODO.
 });

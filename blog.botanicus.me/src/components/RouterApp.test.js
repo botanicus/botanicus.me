@@ -1,8 +1,8 @@
 import React from 'react';
 import { shallow } from 'enzyme';
-import BlogPostList from './BlogPostList.js';
+// import RouterApp from './RouterApp.js';
 
 it('renders without crashing', () => {
-  // const wrapper = shallow(<BlogPostList />);
+  // const wrapper = shallow(<RouterApp />);
   // TODO.
 });

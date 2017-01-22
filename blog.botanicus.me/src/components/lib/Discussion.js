@@ -6,9 +6,9 @@ export default class Discussion extends Component {
     title: PropTypes.string.isRequired
   }
 
-  static contextTypes = {
-    router: PropTypes.object.isRequired
-  }
+  // static contextTypes = {
+  //   router: PropTypes.object.isRequired
+  // }
 
   handleNewComment(comment) {
     console.log(`Comment: ${comment.text}`);
@@ -20,7 +20,7 @@ export default class Discussion extends Component {
   // not perfect either since URL could possibly change.
   render() {
     const { title } = this.props;
-    const location  = this.context.router.getCurrentLocation();
+    // const location  = this.context.router.getCurrentLocation();
 
     return (
       <Disqus shortname="botanicus-me"

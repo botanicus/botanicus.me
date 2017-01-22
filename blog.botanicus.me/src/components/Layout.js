@@ -3,7 +3,7 @@ import Link from './lib/LinkToUnlessCurrent.js';
 import { TwitterIcon, GitHubIcon } from './lib/icons';
 import Ribbon from 'react-github-fork-ribbon';
 import { BLOG_TITLE, TOPTAL_PROFILE_URL } from '../constants.js';
-import './global.css';
+import '../global.css';
 import style from './Layout.mcss';
 
 export default class Layout extends Component {
