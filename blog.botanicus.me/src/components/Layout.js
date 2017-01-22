@@ -14,7 +14,7 @@ export default class Layout extends Component {
   render() {
     return (
       <div>
-        <Ribbon href={TOPTAL_PROFILE_URL}>
+        <Ribbon href={TOPTAL_PROFILE_URL} target="_blank">
           Hire me on TopTal.com.
         </Ribbon>
 

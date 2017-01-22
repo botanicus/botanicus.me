@@ -1,15 +1,20 @@
+Learn more about Enzyme and write tests.
+  http://airbnb.io/enzyme/docs/api/ShallowWrapper/containsMatchingElement.html
+
+Import blog posts
+
+Set up a MailChimp list and add a subscribe functionality.
+  Send excerpts only as suggested in https://smartblogger.com/create-a-newsletter/
+
+Updated since your last visit highlight yellow.
+Blog-generator: Assets handling.
+Blog-generator: Dependencies on other articles (or construct from link).
+
+Test in browsers (screenshots?)
+
 front-end: React + Redux.
   https://github.com/botanicus/blog (AngularJS)
   react-blog
-
-Import blog posts
-Set up a MailChimp list and add a subscribe functionality.
-  Send excerpts only as suggested in https://smartblogger.com/create-a-newsletter/
-updated since your last visit highlight yellow
-Assets handling in blog-generator
-Dependencies on other articles -> fail.
-Hire-me-ribbon: target="_blank"
-Test in browsers (screenshots?)
 
 ## CSS 4 & PostCSS.
   https://github.com/css-modules/css-modules
