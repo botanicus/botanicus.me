@@ -14,9 +14,9 @@ export default class About extends Component {
     return (
       <article>
         <h1>About me</h1>
-        <div style={{float: 'left', marginRight: 25}}>
+        <div className={style.imageWrapper}>
           <img src={profileImageURL} role="presentation" />
-          <div style={{color: "#aaa", fontStyle: 'italic', fontSize: 18}}>
+          <div className={style.imageDescription}>
             {/* This text shouldn't be longer than the image is wide. */}
             As I said, dancing and <br />suits keeps me happy.
           </div>
@@ -46,7 +46,7 @@ export default class About extends Component {
           If you want to get to know more about me, read <Link to={MyStory.path}>my story</Link>.
         </p>
 
-        <h2 style={{clear: 'left'}}>Contact</h2>
+        <h2 className={style.resetFloat}>Contact</h2>
         <p>
           <strong>Professional:</strong> If you want to hire me, please go through
           my <a href={TOPTAL_PROFILE_URL} target="_blank">TopTal.com profile</a>.
@@ -68,7 +68,7 @@ export default class About extends Component {
           personal email very often. I agree it's nuts, but I just like it this way.
         </p>
 
-        <p style={{color: '#aaa', fontStyle: 'bold', display: 'none'}}>
+        <p className={style.subscribe} style={{display: 'none'}}>
           Would you like to get notified about my new posts?
           {/* TODO: subscribe and reenable (display none). */}
         </p>

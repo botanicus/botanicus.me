@@ -19,7 +19,6 @@ export default class Tag extends Component {
     });
   }
 
-  // tag.feed
   render() {
     const { tag, isLoading, error } = this.state;
 

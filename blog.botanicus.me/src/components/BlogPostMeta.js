@@ -2,6 +2,7 @@ import React, { Component, PropTypes } from 'react';
 import Link from './lib/LinkToUnlessCurrent.js';
 import TagList from './TagList.js';
 import TimeAgo from 'react-timeago';
+import style from './BlogPostMeta.mcss';
 
 export default class BlogPostMeta extends Component {
   static propTypes = {
@@ -33,7 +34,7 @@ export default class BlogPostMeta extends Component {
           <TagList tags={post.tags} />
         </h2>
 
-        <div style={{fontStyle: 'italic'}}>
+        <div className={style.meta}>
           Published <TimeAgo date={post.published_at} />
           {this.showUpdatedIfWasUpdated(post)}.
         </div>

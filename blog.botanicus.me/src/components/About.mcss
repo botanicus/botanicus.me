@@ -1,0 +1,19 @@
+.imageWrapper {
+  float: left;
+  margin-right: 25px;
+}
+
+.imageDescription {
+  color: #aaa;
+  font-style: italic;
+  font-size: 18px;
+}
+
+.resetFloat {
+  clear: left;
+}
+
+.subscribe {
+  color: #aaa;
+  font-style: bold;
+}

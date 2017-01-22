@@ -1,3 +1,7 @@
+/*
+  TODO: This first rule is about making it work within h3. It feels like a hack
+  or maybe the CSS should be in BlogPostMeta.mcss?
+*/
 .list {
   padding-left: 15px;
   font-size: 20px;
