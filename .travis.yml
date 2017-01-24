@@ -13,8 +13,8 @@ install:
 
 script:
   - blog-generator.rb generate api.botanicus.me # This has to run before we test the blog, remember my-story is required.
-  - cd blog.botanicus.me && npm install && npm test && cd -
-  - cd blog.botanicus.me && npm run build && cd -
+  - cd blog.botanicus.me && npm install && npm test; cd -
+  - cd blog.botanicus.me && npm run build; cd -
   - rake docker:build
 
 after_success:
