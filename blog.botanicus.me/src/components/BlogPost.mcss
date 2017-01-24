@@ -1,0 +1,9 @@
+.excerpt {
+  font-style: italic;
+}
+
+/* TODO: Make it more general and reuse it (maybe even making it global). */
+.article {
+  padding-left: 120px;
+  padding-right: 120px;
+}
