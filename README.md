@@ -9,8 +9,9 @@ sudo tee -a /etc/hosts <<EOF
 127.0.0.1 blog.botanicus.dev
 EOF
 
-rake build
-rake run
+rake dev:api.botanicus.me
+rake dev:botanicus.me
+rake dev:guard
 
 curl http://api.botanicus.dev:8000/posts.json
 curl http://botanicus.dev:8000/

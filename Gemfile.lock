@@ -23,10 +23,7 @@ GEM
       ruby_dep (~> 1.2)
     lumberjack (1.0.11)
     method_source (0.8.2)
-    mini_portile2 (2.1.0)
     nenv (0.3.0)
-    nokogiri (1.7.0.1)
-      mini_portile2 (~> 2.1.0)
     notiffany (0.1.1)
       nenv (~> 0.1)
       shellany (~> 0.0)
@@ -48,7 +45,6 @@ PLATFORMS
 DEPENDENCIES
   guard
   guard-shell
-  nokogiri
 
 BUNDLED WITH
    1.13.7

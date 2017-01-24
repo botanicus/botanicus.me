@@ -17,6 +17,6 @@
 
 guard(:shell, wait: 10) do
   watch(/^(drafts|posts)\/\d{4}-\d{2}-\d{2}-.+\.(html|md)$/) do |m|
-    system 'blog-generator.rb generate api.botanicus.me --with-drafts'
+    system 'rake dev:compile_posts'
   end
 end
