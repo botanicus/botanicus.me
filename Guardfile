@@ -16,7 +16,7 @@
 # and, you'll have to watch "config/Guardfile" instead of "Guardfile"
 
 guard(:shell, wait: 10) do
-  watch(/^posts\/\d{4}-\d{2}-\d{2}-.+\.(html|md)$/) do |m|
-    system 'blog-generator.rb posts/ api.botanicus.me/'
+  watch(/^(drafts|posts)\/\d{4}-\d{2}-\d{2}-.+\.(html|md)$/) do |m|
+    system 'blog-generator.rb generate api.botanicus.me --with-drafts'
   end
 end

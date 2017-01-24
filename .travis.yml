@@ -12,8 +12,10 @@ install:
   - gem install blog-generator
 
 script:
-  - cd blog.botanicus.me && npm install && npm test
-  - rake build
+  - cd blog.botanicus.me && npm install && npm test && cd -
+  - blog-generator.rb generate api.botanicus.me
+  - cd blog.botanicus.me && npm run build && cd -
+  - rake docker:build
 
 after_success:
   - test "$TRAVIS_BRANCH" == "master" && docker login -u="$DOCKER_USERNAME" -p="$DOCKER_PASSWORD"
