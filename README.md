@@ -18,6 +18,15 @@ curl http://botanicus.dev:8000/
 
 The front-end requires `api.botanicus.me/posts/my-story.json` for the about page.
 
+# Writing
+
+```
+bundle install
+
+# Watch for changes in posts/.
+bundle exec guard
+```
+
 # Deployment
 
 ```
