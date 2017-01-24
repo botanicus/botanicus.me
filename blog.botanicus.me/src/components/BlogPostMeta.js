@@ -29,10 +29,10 @@ export default class BlogPostMeta extends Component {
 
     return (
       <div>
-        <h2>
+        <h1>
           <Link to={post.path}>{post.title}</Link>
           <TagList tags={post.tags} />
-        </h2>
+        </h1>
 
         <div className={style.meta}>
           Published <TimeAgo date={post.published_at} />

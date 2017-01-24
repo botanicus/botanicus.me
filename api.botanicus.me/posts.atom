@@ -5,9 +5,75 @@
   <subtitle></subtitle>
   <link href="/posts.atom" rel="self" />
   <link href="" />
-  <id>urn:uuid:04612d59a29e8173505eb6b365fb100e</id>
+  <id>urn:uuid:66a1a1ff936b2ae42b1c33fb261433a1</id>
   <updated>2017-01-21</updated>
 
+  
+  <entry>
+    <title>The joy of suits</title>
+    <link href="/posts/the-joy-of-suits" />
+    <link rel="alternate" type="text/html" href="/posts/the-joy-of-suits"/>
+    <id>urn:uuid:d98da65dac01d7c83170a0828d647c00</id>
+    <updated>2017-01-24</updated>
+    <!-- TODO: strip HTML from excerpt -->
+    <summary>I love wearing suits. These days I basically don't wear anything else.
+  Unfortunately suits got bad rep these days. They've been accused of being
+  "uncomfortable", "too corporate" and "stuffy". To me nothing could be more
+  far from the truth.</summary>
+<!--     <content type="xhtml">
+      <h2>A suit is man's purse</h2>
+<p>
+  I don't like wearing bags. I never did, but before I started to wear suits,
+  I simply had to. There is only so much you can fit into tiny jeans pockets.
+</p>
+<!-- This depends on high-waisted trousers, English-fit. -->
+
+<p>
+  With a suit, there is space for everything. Documents, map, money, debit card,
+  hankerchief, pen, pocket knife, keys ... I sometimes even put my iPad mini into
+  my pocket and no one could tell from the outside.
+</p>
+
+<p>
+  I like to get a <strong>fob pocket</strong> fitted into my trousers. With a fob
+  pocket, it's simply impossible to lose keys, ever.
+</p>
+
+<h2>Comfort</h2>
+<!-- braces, high waist -->
+
+<h2>The "too-stuffy" myth</h2>
+<p>
+  Really
+</p>
+
+<p>
+  Wool keeps you warm when it's cold and keeps you cool when it's hot.
+  I always thought this is a bullshit.
+  <!-- also consider: aircon (public transport), buttoning up a jacket -->
+</p>
+
+<p>
+  <!-- trousers fit -->
+</p>
+
+<h2>The look</h2>
+<p>
+  I'm a rather skinny guy. A good suit makes me look more muscular. Save your
+  gym membership. What's not to like about that?
+</p>
+
+<h2>Suits and dancing</h2>
+
+<h2>Suits make pick-pocketting hard</h2>
+
+<!-- I always look presentable, no need to think hard what to wear and this doesn't go with that ... -->
+    </content> -->
+    <author>
+      <name></name>
+      <email></email>
+    </author>
+  </entry>
   
   <entry>
     <title>My story</title>
@@ -16,10 +82,9 @@
     <id>urn:uuid:c17fd1cc55cf5e0bc2daeff8b8ad67f4</id>
     <updated>2017-01-21</updated>
     <!-- TODO: strip HTML from excerpt -->
-    <summary>Excerpt</summary>
+    <summary></summary>
 <!--     <content type="xhtml">
       <p>
-  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Soluta quibusdam necessitatibus tempore ullam incidunt amet omnis, veritatis dicta quisquam accusamus at provident vel facere corporis sed fugiat cumque. Consequuntur, necessitatibus!
 </p>
     </content> -->
     <author>

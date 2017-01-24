@@ -2,6 +2,7 @@ import React, { Component, PropTypes } from 'react';
 import Discussion from './lib/Discussion.js';
 import BlogPostMeta from './BlogPostMeta.js';
 import TagList from './TagList.js';
+import style from './BlogPost.mcss';
 
 export default class BlogPost extends Component {
   static propTypes = {
@@ -18,9 +19,9 @@ export default class BlogPost extends Component {
     const { post } = this.props;
 
     return (
-      <article>
+      <article className={style.article}>
         <BlogPostMeta post={post} />
-        <p className="excerpt">
+        <p className={style.excerpt}>
           {post.excerpt}
         </p>
 

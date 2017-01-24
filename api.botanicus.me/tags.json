@@ -1,5 +1,11 @@
 [
   {
+    "title": "suits",
+    "slug": "suits",
+    "path": "/tags/suits",
+    "feed": "/suits.atom"
+  },
+  {
     "title": "travelling",
     "slug": "travelling",
     "path": "/tags/travelling",
