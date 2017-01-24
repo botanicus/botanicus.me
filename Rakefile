@@ -1,6 +1,6 @@
 desc 'Build api.botanicus.me.'
 task 'api.botanicus.me' do
-  sh 'blog-generator.rb posts/ api.botanicus.me/'
+  sh 'blog-generator.rb generate api.botanicus.me'
 end
 
 desc 'Build blog.botanicus.me.'
