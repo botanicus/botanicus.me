@@ -6,3 +6,8 @@ a {
 abbr[title] {
   border-bottom: 2px dotted #aaa;
 }
+
+/* These can't be linked from code since they are in the blog post body. */
+figcaption {
+  color: #aaa;
+}
