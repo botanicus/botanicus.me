@@ -15,8 +15,12 @@
 #
 # and, you'll have to watch "config/Guardfile" instead of "Guardfile"
 
-guard(:shell, wait: 10) do
-  watch(/^(drafts|posts)\/\d{4}-\d{2}-\d{2}-.+\.(html|md)$/) do |m|
-    system 'rake dev:compile_posts'
+# Therer doesn't seem to be any wait option, so on the first run it will run
+# many times as the compilation touches many files.
+guard(:shell, all_on_start: true) do
+  watch(/^(posts\/\d{4}-\d{2}-\d{2}-|drafts\/).+\.(html|md)$/) do |m|
+    # We run ZSH to get our $PATH from ~/.zshenv.
+    # Not optimal, but what the hell.
+    system 'zsh -c "rake dev:compile_posts"'
   end
 end
