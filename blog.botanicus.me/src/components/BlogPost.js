@@ -3,6 +3,8 @@ import Discussion from './lib/Discussion.js';
 import BlogPostMeta from './BlogPostMeta.js';
 import TagList from './TagList.js';
 import style from './BlogPost.mcss';
+import 'highlight.js/styles/monokai.css';
+import Highlight from 'highlight.js';
 
 export default class BlogPost extends Component {
   static propTypes = {
@@ -13,6 +15,10 @@ export default class BlogPost extends Component {
       excerpt: PropTypes.string.isRequired,
       body: PropTypes.string.isRequired,
     }).isRequired
+  }
+
+  componentDidMount() {
+    document.querySelectorAll('pre[lang]').forEach((block) => Highlight.highlightBlock(block));
   }
 
   render() {

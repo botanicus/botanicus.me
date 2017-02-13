@@ -11,3 +11,7 @@ abbr[title] {
 figcaption {
   color: #aaa;
 }
+
+pre {
+  text-align: left;
+}
