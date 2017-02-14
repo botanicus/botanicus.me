@@ -18,7 +18,7 @@ export default class BlogPost extends Component {
   }
 
   componentDidMount() {
-    document.querySelectorAll('pre[lang]').forEach((block) => Highlight.highlightBlock(block));
+    document.querySelectorAll('pre > code[class]').forEach((block) => Highlight.highlightBlock(block));
   }
 
   render() {
