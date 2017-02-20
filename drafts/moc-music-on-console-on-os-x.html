@@ -1,0 +1,99 @@
+title: "MOC: music on console on OS X"
+tags: [IT, OS X]
+---
+
+<p id="excerpt">
+  I don't know why, but all the music players around are just so unnecessarily
+  bloated with features I don't need. All I want is file explorer that can play
+  media files, treating directories like playlists.
+</p>
+
+<h2>Installation and basic setup</h2>
+<code>brew install moc</code>
+
+<p>
+  MOC needs coreaudio running. After a while I got sick running <code>cd /tmp;
+  nohup jackd -d coreaudio &amp;; cd -</code> and wrote a simple <a href="http://www.launchd.info/">launchd script</a>
+  that launches coreaudio on startup.
+</p>
+
+<code lang="xml">
+launchctl unload ~/Library/LaunchAgents/$USER.coreaudio.launch.plist
+tee ~/Library/LaunchAgents/$USER.coreaudio.launch.plist <<EOF
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+  <dict>
+    <key>Label</key>
+    <string>$USER.coreaudio.launch</string>
+
+    <key>ProgramArguments</key>
+    <array>
+      <string>$(which jackd)</string>
+      <string>-d</string>
+      <string>coreaudio</string>
+    </array>
+
+    <key>WorkingDirectory</key>
+    <string>$HOME/Desktop/Music</string>
+
+    <key>RunAtLoad</key>
+    <true />
+
+    <key>KeepAlive</key>
+    <true />
+
+    <!-- I don't have permissions to write into /var/log. -->
+    <key>StandardOutPath</key>
+    <string>/tmp/$USER.coreaudio.launch.stdout</string>
+    <key>StandardErrorPath</key>
+    <string>/tmp/$USER.coreaudio.launch.stderr</string>
+  </dict>
+</plist>
+EOF
+
+launchctl load ~/Library/LaunchAgents/$USER.coreaudio.launch.plist
+</code>
+
+<code>mocp</code>
+
+<h2>Notifications</h2>
+<code lang="ruby" file="~/.moc/on_song_change.rb">
+#!/usr/bin/env ruby
+
+artist, album, song, filename, duration = ARGV
+
+artist ||= filename.split('/')[-3]
+album  ||= filename.split('/')[-2]
+song   ||= filename.split('/')[-1].sub(/\.[^.]+$/, '')
+
+title = "#{song} [#{duration}]"
+body = "#{album} by #{artist}"
+
+exec <<-SCRIPT
+  osascript -e "display notification \\"#{body}\\" with title \\"#{title}\\""
+SCRIPT
+</code>
+
+<code lang="xml" file="~/.moc/config">
+Theme = nightly_theme
+OnSongChange = "/Users/botanicus/.moc/on_song_change.rb %a %r %t %f %d"
+RepeatSongChange = yes
+</code>
+
+<figure>
+  <img src="/assets/music-players-for-os-x-console/moc.png" />
+  <figcaption>My ideal music player. I know, I'm weird.</figcaption>
+</figure>
+
+<h2>OS X media keys</h2>
+<p>
+  <i>Unresolved.</i>
+</p>
+
+<p style="font-style: italic">
+  There's also <a href="https://cmus.github.io/">Cmus</a> which seems to be more
+  actively developped and doesn't need work-arounds to work on OS X. It has plugins
+  for integrating with OS X notifications, media keys and so on. The interface
+  doesn't suit me though.
+</p>
