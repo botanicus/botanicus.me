@@ -20,3 +20,7 @@ script:
 after_success:
   - test "$TRAVIS_BRANCH" == "master" && docker login -u="$DOCKER_USERNAME" -p="$DOCKER_PASSWORD"
   - test "$TRAVIS_BRANCH" == "master" && rake docker:push
+
+# https://docs.travis-ci.com/user/notifications
+notifications:
+  email: false
